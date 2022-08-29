@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Qwitcher+Grypen:wght@700&family=Rubik+Maze&family=Shadows+Into+Light&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    width: 100%;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.5);
+    z-index: 10;
+}
+.navbar-brand{
+    font-weight: 600;
+}
+.nav-link{
+    color: whitesmoke !important;
+    border-bottom: 1px solid transparent; 
+}
+.nav-link:hover{
+    border-bottom: 1px solid wheat; 
+}
+
+/* home */
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.7 )),url(sunrise.jpg);
+    background-repeat: no-repeat;
+
+}
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+ul li{
+    position: relative;
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    font-size: 5em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+
+}
+ul li a::before
+{
+
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 2s;
+    border-right: 8px solid var(--clr);  
+    -webkit-text-stroke: 1px var(--clr); 
+}
+ul li a:hover::before
+{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+@media screen and (max-width:576px){
+    #home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.7 )),url(sunrise.jpg);
+        background-repeat: no-repeat;
+    
+    }
+    ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    
+    }
+    ul li{
+        position: relative;
+        list-style: none;
+    }
+    ul li a{
+        position: relative;
+        font-size: 2em;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    
+    }
+    ul li a::before
+    {
+    
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        overflow: hidden;
+        transition: 2s;
+        border-right: 8px solid var(--clr);  
+        -webkit-text-stroke: 1px var(--clr); 
+    }
+    ul li a:hover::before
+    {
+        width: 100%;
+        filter: drop-shadow(0 0 25px var(--clr));
+    }
+}
+
+/* about */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(44, 44, 46),rgb(45, 45, 67));
+    /* background-color: rgb(38, 36, 46); */
+}
+.circle{
+    width: 380px;
+    height: 450px;
+    background: rgb(74, 63, 63); 
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 5px 12px rgba(0,0,0,.7);
+    margin-bottom: 13%;
+    margin-top: 13%;
+    transition: 1s;
+}
+.circle img{
+    position: absolute;
+    height: 400px;
+    top: 3%;
+    left: 3%;
+    filter: drop-shadow(0px 25px 25px rgba(0,0,0,.7));
+}
+.circle:hover{
+    width: 1250px;
+    height: 450px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.circle:hover .aboutcontent{
+    position:absolute;
+    top:15%;
+    right: 2%;
+    color: aliceblue;
+    width: 63%;
+    opacity: 1;
+    transition: 1.5s;
+}
+.circle .aboutcontent{
+    opacity: 0;
+}
+
+@media screen and (max-width:576px) {
+    .circle{
+        width: 380px;
+        height: 450px;
+        background: rgb(44, 41, 41); 
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0px 5px 12px rgba(0,0,0,.7);
+        margin-bottom: 13%;
+        margin-top: 13%;
+        transition: 1s;
+    }
+    .circle:hover{
+        width: 450px;
+        height: 750px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    .circle:hover .aboutcontent{
+        position:absolute;
+        top:60%;
+        right: 0%;
+        padding: 15px;
+        color: aliceblue;
+        width: 100%;
+        opacity: 1;
+        transition: 1.5s;
+    }
+    .circle .aboutcontent{
+        opacity: 0;
+    }
+}
+
+/* skills */
+
+.skills{
+    background-image: linear-gradient(rgb(124, 149, 240),rgb(45, 45, 67));
+    width: 100%;
+    height: 700px;
+    padding: 50px;
+}
+#skilltext{
+    font-family: 'DynaPuff', cursive;
+}
+
+.skills .container{
+    margin-bottom: 6%;
+}
+label{
+    font-size: 20px;
+    font-family: 'DynaPuff',;
+    font-weight: 400;
+}
+
+.bootstrap{
+    padding: 15px 30px;
+    background-color: rgb(251, 249, 247);
+    border-radius: 10px;
+    width: 250px;
+
+}
+.bootstrap #icons{
+    color: rgb(181, 18, 18);
+    padding: 5px;
+}
+
+/* project */
+
+.project{
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    text-align: center;
+    background-image: linear-gradient(75deg,rgb(82, 122, 72),rgb(45, 45, 67));
+}
+.carousel{
+    width: 80%;
+    height: 70vh;
+    background-color: blueviolet;
+    box-shadow: 10px 20px 10px rgba(0,0,0,.7);
+    text-shadow: 2px 5px 5px rgba(0,0,0,.5);
+    border-radius: 2%;
+}
+iframe{
+    width: 100%;
+    height: 70vh;
+    
+}
+#survaytext{
+    color: black;
+}
+.project .text{
+    font-size: 60px;
+    color: rgb(117, 154, 125);
+    filter:drop-shadow(0px 25px 25px rgba(18, 18, 18, 0.7));
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width:576px) {
+    .carousel{
+        width: 80%;
+        height: 30vh;
+        background-color: blueviolet;
+        box-shadow: 10px 20px 10px rgba(0,0,0,.7);
+        text-shadow: 2px 5px 5px rgba(0,0,0,.5);
+        border-radius: 2%;
+        
+    }
+    iframe{
+        width: 100%;
+        height: 30vh;
+        
+    }
+}
+
+.contact{
+    padding: 7%;
+    background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.3)),url(blur.jpg) !important ;
+    background-position: top;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+}
+.contact iframe{
+    box-shadow: 15px 20px 15px rgba(0,0,0,.7);
+    
+}
+.contact label{
+    color: aliceblue;
+}
